@@ -1,0 +1,12 @@
+{
+  "name": "rorical-blog",
+  "author": "Rorical",
+  "version": "1.0.0",
+  "dependencies": {
+    "@fragy/purity": "^0.5.1",
+    "fragy": "^0.4.1"
+  },
+  "devDependencies": {
+    "fragy-cli": "^0.1.3"
+  }
+}
