@@ -5,6 +5,8 @@ date: 2022-03-08 10:54:26
 
 这篇文章只是作为一个备份
 
+<!--more-->
+
 # MuriData Protocol
 
 MuriData is a ==decentralized vector indexing and searching service==. With blockchain providing transaction and verification ability, It allows anyone to create vector databases and send searching tasks to it.
