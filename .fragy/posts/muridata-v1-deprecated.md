@@ -1,5 +1,5 @@
 ---
-title: Muridata v1 协议设计 (已经废弃)
+title: Muridata-pre v1 协议设计 (已经废弃)
 date: 2022-03-08 10:54:26
 ---
 
@@ -9,7 +9,7 @@ date: 2022-03-08 10:54:26
 
 # MuriData Protocol
 
-MuriData is a ==decentralized vector indexing and searching service==. With blockchain providing transaction and verification ability, It allows anyone to create vector databases and send searching tasks to it.
+MuriData is a decentralized vector indexing and searching service. With blockchain providing transaction and verification ability, It allows anyone to create vector databases and send searching tasks to it.
 
 ## Technology Stack
 - BlockChain
