@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "posts/integral-world.md",
+            "file": "posts/recommendation-system-for-pixivel.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/integral-world.md",
+                "file": "posts/recommendation-system-for-pixivel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "a883e75410e7beaa",
   "lastOpenFiles": [
+    "posts/integral-world.md",
+    "posts/muridata-desc.md",
+    "posts/recommendation-system-for-pixivel.md",
+    "posts/博客迁移说明.md",
+    "public/img/Pasted image 20220723233458.png",
+    "posts/hello-world.md",
+    "Untitled.md",
     "posts/how-to-write-contract-on-substrate.md",
     "Pasted image 20220717185015.png.md",
-    "Pasted image 20220717185015.png",
-    "Pasted image 20220717184941.png",
-    "posts/integral-world.md",
-    "posts/noact-exam.md",
-    "Untitled.md",
-    "posts/hello-world.md",
-    "posts/muridata-desc.md",
-    "posts/muridata-v1-deprecated.md"
+    "Pasted image 20220717185015.png"
   ]
 }
