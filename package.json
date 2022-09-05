@@ -3,10 +3,10 @@
   "author": "Rorical",
   "version": "1.0.0",
   "dependencies": {
-    "@fragy/purity": "^0.5.3",
-    "fragy": "^0.4.1"
+    "@fragy/oneslot": "^0.1.8",
+    "fragy": "^0.8.5"
   },
   "devDependencies": {
-    "fragy-cli": "^0.1.3"
+    "fragy-cli": "^0.1.11"
   }
 }
