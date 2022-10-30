@@ -1011,6 +1011,18 @@ links:
       link: "https://elfile4138.moe/",
       avatar: "https://avatars.githubusercontent.com/u/28867264?v=4?v=3&s=88"
     }
+    - {
+      title: "TriNitroTofu",
+      intro: "_(:з」∠)_",
+      link: "https://tofu.icu/",
+      avatar: "https://www.gravatar.com/avatar/fbd34f6d37010eb9a615fc9cc22e95f0?s=300"
+    }
+    - {
+      title: "小咸鱼Sukanu",
+      intro: "小咸鱼",
+      link: "https://blog.ssf.moe/",
+      avatar: "https://api.daihan.top/api/qq?qq=1074161667"
+    }
 
 
   # 当成员头像加载失败时，替换为指定图片
