@@ -140,7 +140,7 @@ $|\psi\rangle=c_{1}|a_1\rangle+c_{2}|a_2\rangle$
 
 我们可以把量子的自旋看成一个球，而bloch sphere就是专门为qubit建模的
 
-![就是这个球，来自维基百科](https://doc.kmf.com/ke-feedback/2022/11/14/11/30/25/20221114113023.png)
+![就是这个球，来自researchgate](https://doc.kmf.com/ke-feedback/2022/11/14/11/53/52/20221114115352.png)
 
 最上面和最下面代表的是两个本征态，$|0\rangle$ 和 $|1\rangle$。而转动到中间的位置就是它们的叠加态。怎么样，是不是挺形象的。
 
