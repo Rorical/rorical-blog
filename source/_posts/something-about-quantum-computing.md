@@ -9,6 +9,8 @@ date: 2022-11-14 10:09:00
 
 那就总结一下，量子力学以及量子计算咯
 
+> 观前提示：本文假设您有线性代数，概率论和物理学高中水平。
+
 ## 粒子
 
 反正课本里都学了，再写一遍也没啥坏处
@@ -50,11 +52,11 @@ date: 2022-11-14 10:09:00
 自旋为整数的粒子是玻色子，自旋为半整数的粒子是费米子。
 
 
-### 原子（Atom）
+### 原子 (Atom)
 
 基本上，原子都是由一个原子核和外面的电子组成。原子核带正电，而电子都带负电。
 
-#### 原子轨道（Atomic orbital）
+#### 原子轨道 (Atomic orbital)
 
 这玩意描述电子在原子核外面某个位置找到它们的可能性。其实并不是轨道，而是概率分布。
 
@@ -66,7 +68,7 @@ date: 2022-11-14 10:09:00
 
 参与物理作用实体的最小量，都是很小很小的微观粒子。因为在如此小的情况下，它们的行为已经无法用经典力学来描述了。只能引入新的词汇来描述它。
 
-### 测不准原理（Uncertainty principle）
+### 测不准原理 (Uncertainty principle)
 
 因为我们是世界的一部分，所以任何对世界的测量都会对世界造成影响。这种影响无法被消除。
 
@@ -94,13 +96,13 @@ date: 2022-11-14 10:09:00
 
 自旋会创造磁场，内部磁感线方向与自旋方向相同。所以箭头指向S极。
 
-### 波函数
+### 波函数 (Wave function)
 
 波函数用来描述一个量子的状态，是一个概率密度函数。薛定谔方程可以描述它如何随着时间变化。
 
 在量子世界里，万物皆是概率。
 
-#### 波函数叠加
+#### 波函数叠加 (Superposition)
 
 ##### 本征态
 
@@ -114,11 +116,11 @@ $|\psi\rangle=c_{1}|a_1\rangle+c_{2}|a_2\rangle$
 
 量子系统都可以处于叠加态
 
-#### 波函数坍缩
+#### 波函数坍缩 (Collapse of wave function)
 
 对量子进行测量时其状态立马从叠加态变成本征态的过程。
 
-### 量子纠缠
+### 量子纠缠 (Entanglement)
 
 来自同一个粒子变成的两个粒子，它们两个状态的叠加等于原先粒子的状态。这就意味着两个粒子的状态是反关联的。
 
@@ -134,11 +136,11 @@ $|\psi\rangle=c_{1}|a_1\rangle+c_{2}|a_2\rangle$
 
 有了以上关于量子系统的性质描述，我们可以构建理想量子系统的数学模型。
 
-在量子计算中，与传统计算的二进制bit不一样，它用qubit。qubit= quantum+bit，所以是由量子来表示状态，一般用自旋方向表示状态。
+在量子计算中，与传统计算的二进制bit不一样，它用qubit。qubit = quantum+bit，所以是由量子来表示状态，一般用自旋方向表示状态。
 
 #### 布洛赫球面 (Bloch sphere)
 
-我们可以把量子的自旋看成一个球，而bloch sphere就是专门为qubit建模的
+我们可以把量子的自旋可能的方向看成一个球，而bloch sphere就是专门为qubit建模的
 
 ![就是这个球，来自researchgate](https://doc.kmf.com/ke-feedback/2022/11/14/11/53/52/20221114115352.png)
 
@@ -170,29 +172,88 @@ $P( |1\rangle ) = |a_1|^2$
 本征态0可以表示为
 $$
 |0\rangle = 
-\left[ \begin{matrix} 1 \\ 0 \end{matrix} \right]
+\begin{bmatrix} 1 \\ 0 \end{bmatrix}
 $$
 本征态1可以表示为
 $$
 |1\rangle = 
-\left[ \begin{matrix} 0 \\ 1 \end{matrix} \right]
+\begin{bmatrix} 0 \\ 1 \end{bmatrix}
 $$
 它们的线性组合也就是qubit的状态为
 $$
 |\psi\rangle = 
-a_0\left[ \begin{matrix} 1 \\ 0 \end{matrix} \right] +
-a_1\left[ \begin{matrix} 0 \\ 1 \end{matrix} \right] =
-\left[ \begin{matrix} a_0 \\ a_1 \end{matrix} \right]
+a_0 \begin{bmatrix} 1 \\ 0 \end{bmatrix} +
+a_1 \begin{bmatrix} 0 \\ 1 \end{bmatrix} =
+ \begin{bmatrix} a_0 \\ a_1 \end{bmatrix} 
 $$
-并且 $a_0, a_1 \in \mathbb{C}$
+并且 $a_0, a_1 \in \mathbb{C}$。
 
 因为我们想让 $|||\psi\rangle||_z = 1$，所以才得出$\sqrt{|a_0|^2 + |a_1|^2} = 1$
 
-### 问题
+很正常，概率相加等于1。
 
-#### 量子退相干
+#### 多比特测量
 
-量子系统没办法完全与外界隔绝，导致随着时间的迁移外部状态渐渐对内部造成很大影响。
+当我们有两个量子比特，可以这么写它们总的叠加态
 
+$|\psi\rangle=a|00\rangle+b|01\rangle+c|10\rangle+d|11\rangle$
+
+更多的也可以再往上写。
+
+而这个符号里有两个数字在，其实是张量乘法（Tensor product）的缩写。
+
+$|\psi\rangle \otimes |\psi^{\prime}\rangle = |\psi\rangle|\psi^{\prime}\rangle = |\psi\psi^{\prime}\rangle$
+
+它的定义为
+
+$\begin{bmatrix} a_0 \\ a_1 \end{bmatrix} \otimes \begin{bmatrix} b_0 \\ b_1 \end{bmatrix} = \begin{bmatrix} a_0b_0 \\ a_0b_1 \\ a_1b_0 \\ a_1b_1 \end{bmatrix}$
+
+所以对于这几个量子比特的组合，就是
+
+$|00\rangle = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}$
+
+$|01\rangle = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}$
+
+$|10\rangle = \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}$
+
+$|11\rangle = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}$
+
+看起来就是把二进制表示成为了One-Hot编码。
+
+如果我们测量这两个量子比特，那么获取到 $|00\rangle$ 的概率很显然就是它系数的平方 $|a|^2$。
+
+但是在这种表示方法下，如果我们只测量第一个量子比特，那么获取到 0 的可能性有两组: $|00\rangle$ 和 $|01\rangle$ ，所以这时候的概率为它们俩平方和 $|a|^2 + |b|^2$。
+
+我们可以把这种多比特的表示方法和单比特之间进行转换（如果只考虑其中一个比特）。
+
+对于第一个比特那就是$(\sqrt{|a|^2+|b|^2})|0\rangle + (\sqrt{|c|^2+|d|^2})|1\rangle$
+
+但是为什么我们要写出这种多比特形式呢？
+
+第一是因为，每个量子比特之间的状态互不干扰，是统计学上独立的。所以二维向量就不太够，必须用更高维度的向量来表示所有bits。
+
+第二是因为，多个量子比特会引入新的状态：纠缠态（Entangled state）。
+
+纠缠态不能用简单的张量积来表示，必须用不同量子比特状态的叠加来表示。
+
+考虑这种情况，因为是做了加法，它的结果还是处在可行的张量积空间内。
+
+$|\phi\rangle^{+} = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$
+
+在这种状态下我们发现，获得 $|00\rangle$ 和 $|11\rangle$ 结果的概率相等，这也就意味着两个量子比特的状态已经绑定了，成为了纠缠态。
+
+如果我们想使用张量积来表示，会发现根本不存在这种情况。具体推导可以自己试试？
+
+#### 混合状态 (Mixed state)
+
+上面考虑的过于理想，在实际的量子计算机中，我们不可避免会引入外部噪声。
+
+**量子退相干** 就可以改变它的状态，因为量子系统没办法完全与外界隔绝，导致随着时间的迁移外部状态渐渐对内部造成很大影响。
+
+所以上面的理想情况下的量子态 $|\psi\rangle$ 我们称为纯粹的量子态 (pure)
+
+接下来我们需要一个新的数学工具来更好的表示新的混合态：密度矩阵 (Density matrix)。
+
+密度矩阵可以让我们处理有纠缠态和有噪声的情况。
 
 > 未完待续
