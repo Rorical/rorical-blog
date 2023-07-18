@@ -13,13 +13,13 @@ date: 2023-7-18 10:33:00
 
 音频作为和时间相关的数据也是存在频域和时域的，可以把音频信号和频谱之间相互转换。梅尔频谱则是基于人类耳朵“对低频敏感”的特征将频率尺度改变，让低频区域拉伸占比大一些罢了。
 
-![](/images/Pasted image 20230718104558.png)
+![?](/images/20230718104558.png)
 
 这个 Tacotron2 广泛采用了 LSTM 对文本和语音进行建模并且用卷积提取特征。输入首先是被 LSTM 分析过后接下来被投喂到另一个 LSTM 里面，第二个 LSTM 负责生成梅尔频谱。和文本自回归预测一样它也通过 Stop Token 来停止生成。
 
 WaveNet 则是一个典型的自回归模型，也就是根据之前的数据预测下一个。这和 Encoder-Only Tranformer 是一样的。
 
-![](/images/Pasted image 20230718104053.png)
+![](/images/20230718104053.png)
 
 如图所示，WaveNet 就是一群卷积神经网络组成的预测模型，通过历史数据预测下一个点。
 
@@ -33,7 +33,7 @@ HiFiGAN 在还原高质量音频上采用了 Adversarial Training，也就是额
 
 毕竟在图像生成上这个 Diffusion 模型可是大放异彩，就有人会把它搬到别的领域。[DiffSinger](https://arxiv.org/abs/2105.02446)就做的还不错。
 
-![](/images/Pasted image 20230718112242.png)
+![](/images/20230718112242.png)
 
 大概就是采用了浅扩散，通过condition数据进行扩散采样生成梅尔频谱。
 浅扩散看来就是从扩散的一半进行，不过我也没细看。
@@ -42,7 +42,7 @@ HiFiGAN 在还原高质量音频上采用了 Adversarial Training，也就是额
 
 然后我就看了 [VITS](https://arxiv.org/abs/2106.06103)，这个模型看起来要复杂一点点，不过也很容易理解。
 
-![](/images/Pasted image 20230718105806.png)
+![](/images/20230718105806.png)
 
 端到端的意思就是，它不需要声码器来把 Mel-Spectro 转换为 Raw Waveform，它直接生成音频的 Waveform。
 
