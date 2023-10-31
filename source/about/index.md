@@ -6,7 +6,9 @@ date: 2022-09-29 15:23:44
 
 # 誰 ?
 
-准带学生。
+带学生
+
+University of Oxford 本科在读
 
 Shugetsu 创始人之一，Ftsu 摸鱼人。然后 Pixivel 有问题的时候可能会去修。
 
