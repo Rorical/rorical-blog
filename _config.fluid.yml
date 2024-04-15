@@ -427,6 +427,7 @@ footer:
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    <script defer src="https://analytics.rorical.blue/script.js" data-website-id="f862855d-59f8-4ddf-8235-99e5e7f9b65e"></script>
   '
 
   # 展示网站的 PV、UV 统计数
