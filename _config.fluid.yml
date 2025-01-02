@@ -1024,6 +1024,12 @@ links:
       link: "https://blog.ssf.moe/",
       avatar: "https://api.daihan.top/api/qq?qq=1074161667"
     }
+    - {
+      title: "一零次元",
+      intro: "热爱分享快乐的人们身旁，也一定有着一帮快乐的人吧",
+      link: "https://blog.binrz.com/",
+      avatar: "https://binrz.com/tyz020.webp"
+    }
 
 
   # 当成员头像加载失败时，替换为指定图片
