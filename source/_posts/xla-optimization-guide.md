@@ -1,6 +1,6 @@
 ---
 title: Pytorch XLA Optimization Guide
-date: 2023-7-18 10:33:00
+date: 2025-10-13 17:47:00
 ---
 
 Training large-scale deep learning models on TPUs can be a game-changer, but it often comes with its own set of challenges. One of the most common hurdles is achieving optimal performance with PyTorch/XLA. In this blog post, we'll walk through a real-world debugging session to uncover the secrets of PyTorch/XLA performance optimization.
